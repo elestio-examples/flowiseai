@@ -13,5 +13,5 @@ Deploy FlowiseAI server with CI/CD on Elestio
 You can open FlowiseAI UI here:
 
     URL: https://[CI_CD_DOMAIN]
-    Login: admin
+    Login: root
     password: [ADMIN_PASSWORD]

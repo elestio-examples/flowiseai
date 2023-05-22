@@ -10,10 +10,8 @@ ports:
 environments:
   - key: "SOFTWARE_VERSION_TAG"
     value: "latest"
-  - key: "POSTGRES_USER"
-    value: "postgres"
-  - key: "SECRET_KEY_BASE"
-    value: "random_password-random_password-random_password"
+  - key: "USERNAME"
+    value: "root"
   - key: "ADMIN_PASSWORD"
     value: "random_password"
 config:
@@ -35,5 +33,5 @@ lifeCycleConfig:
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "FlowiseAI Admin"
-    login: "admin"
+    login: "root"
     password: "[ADMIN_PASSWORD]"
