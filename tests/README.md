@@ -1,6 +1,6 @@
 # FlowiseAI CI/CD pipeline
 
-<a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/flowiseai"><img src="deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
+<a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/flowiseai"><img src="../deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
 
 Deploy FlowiseAI server with CI/CD on Elestio
 
