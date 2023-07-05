@@ -1,1 +1,2 @@
-docker build -f docker/Dockerfile --no-cache -t elestio4test/flowise:latest .
+
+docker buildx build . --output type=docker,name=elestio4test/flowiseai:latest | docker load
