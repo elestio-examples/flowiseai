@@ -10,5 +10,5 @@ services:
       - PASSWORD=${ADMIN_PASSWORD}
     ports:
       - "172.17.0.1:3965:3000"
-    # volumes:
-    #   - ./.flowise:/root/.flowise
+    volumes:
+      - ./data:/data
