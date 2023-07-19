@@ -10,6 +10,8 @@
 
 [FlowwiseAi](https://github.com/FlowiseAI/Flowise) is an open source software product to allow to build customized LLM Flow.
 
+<img src="https://github.com/elestio-examples/flowiseai/raw/main/flowise.gif" alt="flowiseai" width="800">
+
 Deploy a <a target="_blank" href="https://elest.io/open-source/flowiseai">fully managed Flowsieai</a> on <a target="_blank" href="https://elest.io/">elest.io</a> if you want customized LLM Flow for your AI based Aplications.
 
 [![deploy](https://github.com/elestio-examples/keycloak/raw/main/deploy-on-elestio.png)](https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/flowiseai)
@@ -34,11 +36,6 @@ Copy the .env file from tests folder to the project directory
 
 Edit the .env file with your own values.
 
-Create data folders with correct permissions
-
-    mkdir -p ./flowise;
-    chown -R 1001:1001 ./flowise;
-
 Run the project with the following command
 
     docker-compose up -d
@@ -49,30 +46,28 @@ You can access the Web UI at: `http://your-domain:3965`
 
 Here are some example snippets to help you get started creating a container.
 
-    version: '3.1'
+    version: "3.1"
+
     services:
-    flowise:
-        image: elestio4test/flowise:${SOFTWARE_VERSION_TAG}
-        restart: always
-        environment:
-            - PORT=3000
-            - USERNAME=${USERNAME}
-            - PASSWORD=${ADMIN_PASSWORD}
-        ports:
-            - '172.17.0.1:3965:3000'
-        volumes:
-            - ./.flowise:/root/.flowise
-        command: /bin/sh -c "sleep 3; flowise start"
+        flowise:
+            image: elestio4test/flowiseai:${SOFTWARE_VERSION_TAG}
+            restart: always
+            environment:
+                - PORT=3000
+                - FLOWISE_USERNAME=${USERNAME}
+                - FLOWISE_PASSWORD=${ADMIN_PASSWORD}
+            ports:
+                - "172.17.0.1:3965:3000"
+            volumes:
+                - ./.flowise:/root/.flowise
 
 ### Environment variables
 
-|           Variable           |    Value (example)      |
-| :--------------------------: | :--------------------:  |
-|     SOFTWARE_VERSION_TAG     |        latest           |
-|     USERNAME                 |         root            |
-|     ADMIN_PASSWORD           |        test1234         |
-
-
+|       Variable       | Value (example) |
+| :------------------: | :-------------: |
+| SOFTWARE_VERSION_TAG |     latest      |
+|       USERNAME       |  your-username  |
+|    ADMIN_PASSWORD    |  your-password  |
 
 # Maintenance
 
@@ -114,4 +109,3 @@ That's it! With these simple steps, you can easily backup and restore your data 
 - <a target="_blank" href="https://docs.flowiseai.com/">FlowsieAI documentation</a>
 
 - <a target="_blank" href="https://github.com/elestio-examples/flowiseai">Elestio/FlowiseAI Github repository</a>
-
