@@ -66,8 +66,8 @@ Here are some example snippets to help you get started creating a container.
 |       Variable       | Value (example) |
 | :------------------: | :-------------: |
 | SOFTWARE_VERSION_TAG |     latest      |
-|       USERNAME       |  your-username  |
-|    ADMIN_PASSWORD    |  your-password  |
+|   FLOWISE_USERNAME   |  your-username  |
+|   FLOWISE_PASSWORD   |  your-password  |
 
 # Maintenance
 
