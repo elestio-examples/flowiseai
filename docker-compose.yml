@@ -8,6 +8,10 @@ services:
       - PORT=3000
       - FLOWISE_USERNAME=${USERNAME}
       - FLOWISE_PASSWORD=${ADMIN_PASSWORD}
+      - DATABASE_PATH=/root/.flowise
+      - APIKEY_PATH=/root/.flowise
+      - LOG_PATH=/root/.flowise/logs
+      - SECRETKEY_PATH=/root/.flowise
     ports:
       - "172.17.0.1:3965:3000"
     volumes:
