@@ -11,5 +11,4 @@ services:
     ports:
       - "172.17.0.1:3965:3000"
     volumes:
-      - ./.flowise:/root/.flowise\
-    command: /bin/sh -c "sleep 3; flowise start"
+      - ./.flowise:/root/.flowise
