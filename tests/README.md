@@ -73,7 +73,7 @@ Here are some example snippets to help you get started creating a container.
 
 ## Logging
 
-The Elestio Keycloak Docker image sends the container logs to stdout. To view the logs, you can use the following command:
+The Elestio flowiseai Docker image sends the container logs to stdout. To view the logs, you can use the following command:
 
     docker-compose logs -f
 
